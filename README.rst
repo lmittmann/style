@@ -63,7 +63,6 @@ Colors
 - ``magenta``
 - ``cyan``
 - ``white``
-- ``gray``
 
 Background colors
 ~~~~~~~~~~~~~~~~~
