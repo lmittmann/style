@@ -15,6 +15,11 @@ class StyleBuilderTestCase(unittest.TestCase):
         self.assertTrue('test1 test2' in clr.red('test1', 'test2'))
         self.assertTrue('31' in clr.red('test1', 'test2'))
 
+    def test_non_string_arguments(self):
+        # test styling of multiple arguments that are not strings
+        self.assertTrue('1 True 0.1' in clr.red(1, True, 0.1))
+        self.assertTrue('31' in clr.red(1, True, 0.1))
+
     def test_style_chaining(self):
         # test that chaining style attributes works
         self.assertTrue('31;47;1' in clr.red.bgWhite.bold('test'))
