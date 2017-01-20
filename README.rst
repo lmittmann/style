@@ -12,7 +12,7 @@ Install
 
 ::
 
-    $ pip3 install clr
+    $ pip install clr
 
 
 Usage
@@ -44,7 +44,7 @@ Modifiers
 ~~~~~~~~~
 
 - ``bold``
-- ``bgBold``
+- ``bg_bold``
 - ``dim``
 - ``italic``
 - ``underline``
@@ -67,14 +67,14 @@ Colors
 Background colors
 ~~~~~~~~~~~~~~~~~
 
-- ``bgBlack``
-- ``bgRed``
-- ``bgGreen``
-- ``bgYellow``
-- ``bgBlue``
-- ``bgMagenta``
-- ``bgCyan``
-- ``bgWhite``
+- ``bg_black``
+- ``bg_red``
+- ``bg_green``
+- ``bg_yellow``
+- ``bg_blue``
+- ``bg_magenta``
+- ``bg_cyan``
+- ``bg_white``
 
 .. |Build Status| image:: https://travis-ci.org/lmittmann/clr.svg?branch=master
     :target: https://travis-ci.org/lmittmann/clr

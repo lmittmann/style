@@ -4,7 +4,7 @@ import sys
 _enabled = sys.stdout.isatty()
 _styles = {
     'bold': 1,
-    'bgBold': 100,
+    'bg_bold': 100,
     'dim': 2,
     'italic': 3,
     'underline': 4,
@@ -19,14 +19,14 @@ _styles = {
     'magenta': 35,
     'cyan': 36,
     'white': 37,
-    'bgBlack': 40,
-    'bgRed': 41,
-    'bgGreen': 42,
-    'bgYellow': 43,
-    'bgBlue': 44,
-    'bgMagenta': 45,
-    'bgCyan': 46,
-    'bgWhite': 47
+    'bg_black': 40,
+    'bg_red': 41,
+    'bg_green': 42,
+    'bg_yellow': 43,
+    'bg_blue': 44,
+    'bg_magenta': 45,
+    'bg_cyan': 46,
+    'bg_white': 47
 }
 
 
@@ -39,7 +39,7 @@ class StyleBuilder:
         string = ' '.join(str(obj) for obj in objects)
         if _enabled and self._style_list:
             try:
-                self._style_list.remove(_styles['bgBold'])
+                self._style_list.remove(_styles['bg_bold'])
                 for i, val in enumerate(self._style_list):
                     if 40 <= val and val <= 47:
                         self._style_list[i] += 60
