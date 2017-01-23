@@ -35,8 +35,8 @@ class StyleBuilder:
         self._style_list = style_list
         self._is_root = is_root
 
-    def __call__(self, *objects):
-        string = ' '.join(str(obj) for obj in objects)
+    def __call__(self, *objects, sep=' '):
+        string = sep.join(str(obj) for obj in objects)
         if _enabled and self._style_list:
             try:
                 self._style_list.remove(_styles['bg_bold'])

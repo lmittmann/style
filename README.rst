@@ -28,13 +28,13 @@ Usage
 API
 ---
 
-clr.\ ``<style>[.<style>...](object, [object...])``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+clr.\ ``style*[.style](*objects, sep=' ')``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Chain `styles <#styles>`__ and call the last one as a method with an argument. Order doesn't matter, and later styles
 take precedence in case of a conflict, e.g. ``clr.red.yellow.green`` is equivalent to ``clr.green``.
 
-Multiple arguments will be separated by space.
+Multiple arguments will be separated by ``sep``, a space by default.
 
 
 Styles

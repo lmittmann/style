@@ -20,6 +20,10 @@ class StyleBuilderTestCase(unittest.TestCase):
         self.assertTrue('1 True 0.1' in clr.red(1, True, 0.1))
         self.assertTrue('31' in clr.red(1, True, 0.1))
 
+    def test_seperator(self):
+        # test custom seperator
+        self.assertTrue('test1, test2' in clr.red('test1', 'test2', sep=', '))
+
     def test_style_chaining(self):
         # test that chaining style attributes works
         self.assertTrue('31;47;1' in clr.red.bg_white.bold('test'))
