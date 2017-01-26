@@ -24,6 +24,11 @@ class StyleBuilderTestCase(unittest.TestCase):
         # test custom seperator
         self.assertTrue('test1, test2' in clr.red('test1', 'test2', sep=', '))
 
+    def test_non_string_seperator(self):
+        # test if a non string seperator raises a TypeError
+        with self.assertRaises(TypeError):
+            clr.red('test1', 'test2', sep=0)
+
     def test_style_chaining(self):
         # test that chaining style attributes works
         self.assertTrue('31;47;1' in clr.red.bg_white.bold('test'))

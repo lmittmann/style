@@ -35,7 +35,11 @@ class StyleBuilder:
         self._style_list = style_list
         self._is_root = is_root
 
-    def __call__(self, *objects, sep=' '):
+    def __call__(self, *objects, **kwargs):
+        sep = kwargs.get('sep', ' ')
+        if type(sep) is not str:
+            raise TypeError('sep must be None or a string, not %s' % type(sep).__name__)
+
         string = sep.join(str(obj) for obj in objects)
         if _enabled and self._style_list:
             try:
