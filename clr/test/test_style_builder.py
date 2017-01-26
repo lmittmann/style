@@ -31,9 +31,9 @@ class StyleBuilderTestCase(unittest.TestCase):
 
     def test_style_chaining(self):
         # test that chaining style attributes works
-        self.assertTrue('31;47;1' in clr.red.bg_white.bold('test'))
-        self.assertTrue('47;31;1' in clr.bg_white.red.bold('test'))
-        self.assertTrue('47;1;31' in clr.bg_white.bold.red('test'))
+        self.assertTrue('31;47;1' in clr.red.on_white.bold('test'))
+        self.assertTrue('47;31;1' in clr.on_white.red.bold('test'))
+        self.assertTrue('47;1;31' in clr.on_white.bold.red('test'))
 
 if __name__ == '__main__':
     unittest.main()

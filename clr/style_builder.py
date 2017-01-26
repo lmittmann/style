@@ -4,7 +4,6 @@ import sys
 _enabled = sys.stdout.isatty()
 _styles = {
     'bold': 1,
-    'bg_bold': 100,
     'dim': 2,
     'italic': 3,
     'underline': 4,
@@ -19,14 +18,30 @@ _styles = {
     'magenta': 35,
     'cyan': 36,
     'white': 37,
-    'bg_black': 40,
-    'bg_red': 41,
-    'bg_green': 42,
-    'bg_yellow': 43,
-    'bg_blue': 44,
-    'bg_magenta': 45,
-    'bg_cyan': 46,
-    'bg_white': 47
+    'light_black': 90,
+    'light_red': 91,
+    'light_green': 92,
+    'light_yellow': 93,
+    'light_blue': 94,
+    'light_magenta': 95,
+    'light_cyan': 96,
+    'light_white': 97,
+    'on_black': 40,
+    'on_red': 41,
+    'on_green': 42,
+    'on_yellow': 43,
+    'on_blue': 44,
+    'on_magenta': 45,
+    'on_cyan': 46,
+    'on_white': 47,
+    'on_light_black': 100,
+    'on_light_red': 101,
+    'on_light_green': 102,
+    'on_light_yellow': 103,
+    'on_light_blue': 104,
+    'on_light_magenta': 105,
+    'on_light_cyan': 106,
+    'on_light_white': 107
 }
 
 
@@ -42,13 +57,6 @@ class StyleBuilder:
 
         string = sep.join(str(obj) for obj in objects)
         if _enabled and self._style_list:
-            try:
-                self._style_list.remove(_styles['bg_bold'])
-                for i, val in enumerate(self._style_list):
-                    if 40 <= val and val <= 47:
-                        self._style_list[i] += 60
-            except:
-                pass
             return '\033[%sm%s\033[0m' % (';'.join([str(val) for val in self._style_list]), string)
         return string
 

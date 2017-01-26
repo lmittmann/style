@@ -6,7 +6,7 @@ with open('README.rst') as file:
 
 setup(name='clr',
       packages=['clr'],
-      version='1.0.2',
+      version='1.0.3',
       author='lmittmann',
       description='🌈 Terminal string styling',
       long_description=readme,
