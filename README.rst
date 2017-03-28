@@ -54,7 +54,7 @@ Styles
 +---------------------+---------------+---------------------+------------------+------------------------+
 
 
-.. |Build Status| image:: https://travis-ci.org/lmittmann/clr.svg?branch=master
-    :target: https://travis-ci.org/lmittmann/clr
+.. |Build Status| image:: https://travis-ci.org/lmittmann/style.svg?branch=master
+    :target: https://travis-ci.org/lmittmann/style
 .. |PyPI version| image:: https://img.shields.io/pypi/v/style.svg
     :target: https://pypi.python.org/pypi/style

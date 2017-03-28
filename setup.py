@@ -11,5 +11,5 @@ setup(name='style',
       description='🌈 Terminal string styling',
       long_description=readme,
       keywords=['style', 'color', 'ansi', 'terminal styling', 'chalk'],
-      url='https://github.com/lmittmann/clr',
+      url='https://github.com/lmittmann/style',
       license='MIT')
