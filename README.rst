@@ -1,9 +1,9 @@
-clr
-===
+style
+=====
 
 |Build Status| |PyPI version|
 
-**clr** is a simple terminal string styling library. Its API is a port of the popular
+**style** is a simple terminal string styling library. Its API is a port of the popular
 `chalk <https://github.com/chalk/chalk>`__ module for javascript.
 
 
@@ -12,7 +12,7 @@ Install
 
 ::
 
-    $ pip install clr
+    $ pip install style
 
 
 Usage
@@ -20,19 +20,19 @@ Usage
 
 .. code:: py
 
-    import clr
+    import style
 
-    print(clr.red.bold('Hello world!'))
+    print(style.red.bold('Hello world!'))
 
 
 API
 ---
 
-clr.\ ``style*[.style](*objects, sep=' ')``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+style.\ ``style*[.style](*objects, sep=' ')``
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Chain `styles <#styles>`__ and call the last one as a method with an argument. Order doesn't matter, and later styles
-take precedence in case of a conflict, e.g. ``clr.red.yellow.green`` is equivalent to ``clr.green``.
+take precedence in case of a conflict, e.g. ``style.red.yellow.green`` is equivalent to ``style.green``.
 
 Multiple arguments will be separated by ``sep``, a space by default.
 
@@ -56,5 +56,5 @@ Styles
 
 .. |Build Status| image:: https://travis-ci.org/lmittmann/clr.svg?branch=master
     :target: https://travis-ci.org/lmittmann/clr
-.. |PyPI version| image:: https://img.shields.io/pypi/v/clr.svg
-    :target: https://pypi.python.org/pypi/clr
+.. |PyPI version| image:: https://img.shields.io/pypi/v/style.svg
+    :target: https://pypi.python.org/pypi/style

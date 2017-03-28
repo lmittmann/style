@@ -1,6 +1,6 @@
 import sys
 
-from clr.style_builder import StyleBuilder, _styles
+from style.style_builder import StyleBuilder, _styles
 
 
 __module__ = sys.modules[__name__]

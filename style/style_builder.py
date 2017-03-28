@@ -53,7 +53,7 @@ class StyleBuilder:
     def __call__(self, *objects, **kwargs):
         sep = kwargs.get('sep', ' ')
         if type(sep) is not str:
-            raise TypeError('sep must be None or a string, not %s' % type(sep).__name__)
+            raise TypeError('sep must be None or a string, not %r' % type(sep).__name__)
 
         string = sep.join(str(obj) for obj in objects)
         if _enabled and self._style_list:

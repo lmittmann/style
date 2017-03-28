@@ -2,14 +2,14 @@
 from setuptools import setup
 
 with open('README.rst') as file:
-    readme = read_data = file.read()
+    readme = file.read()
 
-setup(name='clr',
-      packages=['clr'],
+setup(name='style',
+      packages=['style'],
       version='1.0.3',
       author='lmittmann',
       description='🌈 Terminal string styling',
       long_description=readme,
-      keywords=[','.join(['clr', 'color', 'ansi', 'terminal styling', 'chalk'])],
+      keywords=['style', 'color', 'ansi', 'terminal styling', 'chalk'],
       url='https://github.com/lmittmann/clr',
       license='MIT')

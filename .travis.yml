@@ -6,6 +6,6 @@ python:
 before_script:
   - pip install pep8
 script:
-  - pep8 --max-line-length=99 clr
+  - pep8 --max-line-length=99 style
   - python -m unittest discover
   - python setup.py sdist bdist_wheel --universal
