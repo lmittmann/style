@@ -6,7 +6,7 @@ with open('README.rst') as file:
 
 setup(name='style',
       packages=['style'],
-      version='1.0.3',
+      version='1.0.4',
       author='lmittmann',
       description='🌈 Terminal string styling',
       long_description=readme,

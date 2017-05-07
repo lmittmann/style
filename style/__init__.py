@@ -1,8 +1,14 @@
 import sys
 
-from style.style_builder import StyleBuilder, _styles
+from style.style_builder import _StyleBuilder
 
 
-__module__ = sys.modules[__name__]
-for key, value in _styles.items():
-    setattr(__module__, key, StyleBuilder([value], True))
+_enabled = sys.stdout.isatty()
+if '--color' in sys.argv:
+    _enabled = True
+elif '--no-color' in sys.argv:
+    _enabled = False
+
+style_builder = _StyleBuilder([], True)
+style_builder.enabled = _enabled
+sys.modules[__name__] = style_builder

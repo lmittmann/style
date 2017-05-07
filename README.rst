@@ -36,6 +36,14 @@ take precedence in case of a conflict, e.g. ``style.red.yellow.green`` is equiva
 
 Multiple arguments will be separated by ``sep``, a space by default.
 
+style.\ ``enabled``
+~~~~~~~~~~~~~~~~~~~
+
+Color support is automatically detected, but can also be changed manually.
+
+- set ``style.enabled`` to ``True`` or ``False``
+- use the command line parameter ``--color`` or ``--no-color``
+
 
 Styles
 ------
