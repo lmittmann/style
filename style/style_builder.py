@@ -1,49 +1,10 @@
 import sys
 import types
 
+from style.ansi import _styles
+
 
 _module_name = __name__.split('.')[0]
-_styles = {
-    'bold': 1,
-    'dim': 2,
-    'italic': 3,
-    'underline': 4,
-    'inverse': 7,
-    'hidden': 8,
-    'strikethrough': 9,
-    'black': 30,
-    'red': 31,
-    'green': 32,
-    'yellow': 33,
-    'blue': 34,
-    'magenta': 35,
-    'cyan': 36,
-    'white': 37,
-    'light_black': 90,
-    'light_red': 91,
-    'light_green': 92,
-    'light_yellow': 93,
-    'light_blue': 94,
-    'light_magenta': 95,
-    'light_cyan': 96,
-    'light_white': 97,
-    'on_black': 40,
-    'on_red': 41,
-    'on_green': 42,
-    'on_yellow': 43,
-    'on_blue': 44,
-    'on_magenta': 45,
-    'on_cyan': 46,
-    'on_white': 47,
-    'on_light_black': 100,
-    'on_light_red': 101,
-    'on_light_green': 102,
-    'on_light_yellow': 103,
-    'on_light_blue': 104,
-    'on_light_magenta': 105,
-    'on_light_cyan': 106,
-    'on_light_white': 107
-}
 
 
 class _StyleBuilder(types.ModuleType):
@@ -79,8 +40,8 @@ class _StyleBuilder(types.ModuleType):
         if attr in _styles:
             if self._is_root:
                 new_style_list = self._style_list[:]
-                new_style_list.append(_styles[attr])
+                new_style_list.append(_styles[attr][0])
                 return _StyleBuilder(new_style_list)
-            self._style_list.append(_styles[attr])
+            self._style_list.append(_styles[attr][0])
             return self
         raise AttributeError('%r object has no attribute %r' % (self.__class__.__name__, attr))
