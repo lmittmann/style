@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup
+from setuptools import setup, find_packages
+from style import __version__
+
 
 with open('README.rst') as file:
     readme = file.read()
 
 setup(name='style',
-      packages=['style'],
-      version='1.0.4',
+      packages=find_packages(),
+      version=__version__,
       author='lmittmann',
       description='🌈 Terminal string styling',
       long_description=readme,
