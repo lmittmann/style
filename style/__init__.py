@@ -1,9 +1,9 @@
 import sys
 
-from style.style_builder import _StyleBuilder
+from style.styled_string_builder import _StyledStringBuilder
 
 
-__version__ = '1.0.4'
+__version__ = '1.1.0'
 
 _enabled = sys.stdout.isatty()
 if '--color' in sys.argv:
@@ -11,7 +11,7 @@ if '--color' in sys.argv:
 elif '--no-color' in sys.argv:
     _enabled = False
 
-style_builder = _StyleBuilder([], True)
-style_builder.enabled = _enabled
-style_builder.__version__ = __version__
-sys.modules[__name__] = style_builder
+styled_string_builder = _StyledStringBuilder([], True)
+styled_string_builder.enabled = _enabled
+styled_string_builder.__version__ = __version__
+sys.modules[__name__] = styled_string_builder

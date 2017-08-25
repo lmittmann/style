@@ -22,7 +22,7 @@ Usage
 
     import style
 
-    print(style.red.bold('Hello world!'))
+    print(style.red('Hello', style.bold('world') + '!'))
 
 
 API
@@ -32,7 +32,8 @@ style.\ ``style*[.style](*objects, sep=' ')``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Chain `styles <#styles>`__ and call the last one as a method with an argument. Order doesn't matter, and later styles
-take precedence in case of a conflict, e.g. ``style.red.yellow.green`` is equivalent to ``style.green``.
+take precedence in case of a conflict, e.g. ``style.red.yellow.green`` is equivalent to ``style.green``. Styles can
+be nested.
 
 Multiple arguments will be separated by ``sep``, a space by default.
 

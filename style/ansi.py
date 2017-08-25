@@ -1,5 +1,5 @@
 _styles = {
-    'reset': (0, 0),
+    'default': (0, 0),
     'bold': (1, 22),
     'dim': (2, 22),
     'italic': (3, 23),
