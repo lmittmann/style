@@ -6,9 +6,8 @@ python:
 before_script:
   - pip install pep8
 script:
-  - pep8 --max-line-length=99 style tests
+  - pep8 --max-line-length=99 style tests setup.py
   - python -m unittest discover
-  - python setup.py sdist bdist_wheel --universal
 
 deploy:
     provider: pypi
