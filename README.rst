@@ -3,8 +3,8 @@ style
 
 |Build Status| |PyPI version|
 
-**style** is a simple terminal string styling library. Its API is a port of the popular
-`chalk <https://github.com/chalk/chalk>`__ module for javascript.
+**style** is a simple terminal string styling package. Its API is a port of the popular
+`chalk <https://github.com/chalk/chalk>`__ package for javascript.
 
 
 Install
