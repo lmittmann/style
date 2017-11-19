@@ -7,7 +7,7 @@ with open('README.rst') as file:
     readme = file.read()
 
 setup(name='style',
-      packages='style',
+      packages=['style'],
       version=__version__,
       author='lmittmann',
       description='🌈 Terminal string styling',
