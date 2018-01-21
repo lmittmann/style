@@ -28,3 +28,17 @@ class _StyledString(str):
                     string += str(obj)
             return '\033[%sm%s\033[%sm' % (self._style_start, string, self._style_end)
         return super(_StyledString, self).__str__()
+
+    def rjust(self, width, fillchar=' '):
+        n_chars = width - len(self)
+        if n_chars > 0:
+            string = str(self)
+            return string.rjust(len(string) + n_chars, fillchar)
+        return self
+
+    def ljust(self, width, fillchar=' '):
+        n_chars = width - len(self)
+        if n_chars > 0:
+            string = str(self)
+            return string.ljust(len(string) + n_chars, fillchar)
+        return self
