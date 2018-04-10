@@ -3,7 +3,7 @@ import sys
 from style.styled_string_builder import _StyledStringBuilder
 
 
-__version__ = '1.1.3'
+__version__ = '1.1.4'
 
 _enabled = sys.stdout.isatty()
 if '--color' in sys.argv:

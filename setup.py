@@ -14,4 +14,12 @@ setup(name='style',
       long_description=readme,
       keywords=['style', 'color', 'ansi', 'terminal styling', 'chalk'],
       url='https://github.com/lmittmann/style',
-      license='MIT')
+      license='MIT',
+      classifiers=['Development Status :: 5 - Production/Stable',
+                   'Intended Audience :: Developers',
+                   'License :: OSI Approved :: MIT License',
+                   'Natural Language :: English',
+                   'Programming Language :: Python :: 2.7',
+                   'Programming Language :: Python :: 3',
+                   'Programming Language :: Python :: 3.5',
+                   'Programming Language :: Python :: 3.6'])
