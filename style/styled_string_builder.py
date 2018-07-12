@@ -10,13 +10,13 @@ _module_name = __name__.split('.')[0]
 class _StyledStringBuilder(types.ModuleType):
     _enabled = True
 
-    @property
-    def enabled(self):
-        return _StyledStringBuilder._enabled
+    @classmethod
+    def enabled(cls):
+        return cls._enabled
 
-    @enabled.setter
-    def enabled(self, value):
-        _StyledStringBuilder._enabled = value
+    @classmethod
+    def enabled(cls, value):
+        cls._enabled = value
 
     def __init__(self, style_list, is_root=False):
         super(_StyledStringBuilder, self).__init__(_module_name)
