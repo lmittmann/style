@@ -1,7 +1,7 @@
 style
 =====
 
-|Build Status| |Codacy| |PyPI version|
+|Build Status| |PyPI version|
 
 **style** is a simple terminal string styling package. Its API is a port of the popular
 `chalk <https://github.com/chalk/chalk>`__ package for javascript.
@@ -65,7 +65,5 @@ Styles
 
 .. |Build Status| image:: https://travis-ci.org/lmittmann/style.svg?branch=master
     :target: https://travis-ci.org/lmittmann/style
-.. |Codacy| image:: https://api.codacy.com/project/badge/Grade/c2687fcbefd6452eba1b1f307df6bc0b
-    :target: https://www.codacy.com/app/lmittmann/style
 .. |PyPI version| image:: https://img.shields.io/pypi/v/style.svg
     :target: https://pypi.org/project/style

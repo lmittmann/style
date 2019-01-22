@@ -1,23 +1,25 @@
 language: python
 python:
-  - 2.7
-  - 3.5
-  - 3.6
+- 2.7
+- 3.6
 
 cache: pip
 
 before_script:
-  - pip install pep8
+- pip install pep8
 script:
-  - pep8 --max-line-length=99 style tests setup.py
-  - python -m unittest discover
+- pep8 --max-line-length=99 style tests setup.py
+- python -m unittest discover
+after_script:
+- VERSION=$(python -c "import style;print(style.__version__)")
+- PYPI_VERSION=$(curl -s https://pypi.org/pypi/style/json | jq -r .info.version)
 
 deploy:
-    provider: pypi
-    distributions: sdist bdist_wheel --universal
-    user: lmittmann
-    password:
-        secure: Go4auYX0NLR5R+LtsTTAxD7j+joU6X+XImp1YJ/u6Mfof52PfZmBlcNaE8TpmI3rJgsHsoHPMHeybVgVtPCA4hBf9FbHxcMyAIXNV42qCUA5CWlkhcq09geJ0cA4X56kSQonDDNMy0/AcSyQtdihfYy6N+60VAvKGOJwdqDw0UhIYBKUdWVYROpTxjXVbqpHGWBxxQovRHflPGv/sRCW1UY9vXKO+fRUAJEX8OGy2UBk/5lDx5VvSEWBF8ql2q17u7g8ij6j1fS21Zc+8NtQTtmtee0EiiZMIdObeIHtAeXcw/u3wmSscj2eXLRN7DO/qYlNOhZhAQyoUV/va0ACNy6aW1ItUJZZhm3IBv3/rE5B5bVhhO6r4YbWR4U7fCcwUY2Cx5s4dXj7KIAgef11NC5dlRtter0eKSr9BPEKJ9fif2pIRHQJZv890SUW9K/oBm5tSThmXMzvyQlBfFxFAjZ1UCIi1PPjfVVbkaWV/E8WC08MMcYQk1MDXPeF4jYPuZloMxIQVospZ/QxrOIGF2syQ6vgprSplZMWUZtgpOMWhsM2QKd/IPiWzE+E55W/NtHLe87iyq4slbXAhL+AjJ6yH9dMwZJLQHca90OytCVVPuLyOY9hTwHVnrEtvzHj36362xy94Mo3PMM8WLel/04aNIHbbAsYRfOZ2wfBs+M=
-    on:
-        branch: master
-        python: 3.6
+  provider: pypi
+  distributions: sdist bdist_wheel --universal
+  user: $PYPI_USER
+  password: $PYPI_PASSWORD
+  on:
+    condition: $(printf "$VERSION\n$PYPI_VERSION" | sort -V | head -n 1) != $VERSION
+    branch: master
+    python: 3.6
