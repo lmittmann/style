@@ -6,11 +6,10 @@ python:
 cache: pip
 
 before_script:
-- pip install pep8
+- pip install pycodestyle
 script:
-- pep8 --max-line-length=99 style tests setup.py
+- pycodestyle style tests setup.py
 - python -m unittest discover
-after_script:
 - VERSION=$(python -c "import style;print(style.__version__)")
 - PYPI_VERSION=$(curl -s https://pypi.org/pypi/style/json | jq -r .info.version)
 

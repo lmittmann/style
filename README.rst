@@ -63,7 +63,7 @@ Styles
 +---------------------+---------------+---------------------+------------------+------------------------+
 
 
-.. |Build Status| image:: https://travis-ci.org/lmittmann/style.svg?branch=master
-    :target: https://travis-ci.org/lmittmann/style
+.. |Build Status| image:: https://travis-ci.com/lmittmann/style.svg?branch=master
+    :target: https://travis-ci.com/lmittmann/style
 .. |PyPI version| image:: https://img.shields.io/pypi/v/style.svg
     :target: https://pypi.org/project/style
