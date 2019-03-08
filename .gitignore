@@ -4,5 +4,6 @@ env/
 env[23]/
 *__pycache__/
 *.egg-info/
+*.vscode/
 
 *.pyc

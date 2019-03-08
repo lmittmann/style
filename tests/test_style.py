@@ -10,10 +10,6 @@ class StyleTestCase(unittest.TestCase):
         with self.assertRaises(TypeError):
             style('test')
 
-    def test_enabled(self):
-        # test if enabled by default
-        self.assertTrue(style.enabled)
-
     def test_single_string(self):
         # test styling of single string
         self.assertIn('test', style.red('test'))

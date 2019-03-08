@@ -1,9 +1,12 @@
 import sys
+import pkg_resources
 
 from style.styled_string_builder import _StyledStringBuilder
 
-
-__version__ = '1.1.5'
+try:
+    __version__ = pkg_resources.get_distribution('style').version
+except Exception:
+    __version__ = 'unknown'
 
 _enabled = sys.stdout.isatty()
 if '--color' in sys.argv:
